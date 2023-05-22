@@ -1,0 +1,126 @@
+.desktop-view {
+    display: none;
+}
+
+.background-img {
+    background: url('/assets/img/image2.png');
+    opacity: 0.55;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+.map img {
+    width: 85%;
+}
+
+.routes1 {
+    top: 0;
+    left: 52%;
+}
+
+.routes2 {
+    top: 49%;
+    left: 32%;
+}
+
+.routes3 {
+    top: 55%;
+    left: 45%;
+}
+
+.routes {
+    color: #e7b10a;
+}
+
+@media (min-width: 576px) {
+    h6 {
+        font-size: 2rem;
+    }
+
+
+    .map img {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .routes2 {
+        top: 49%;
+        left: 34%;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+
+    .background-img {
+        background: url('/assets/img/image5.jpg');
+        opacity: 0.55;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .map {
+        width: 56%;
+    }
+
+    .routes1 {
+        top: 0;
+        left: 51%;
+    }
+    
+    .routes2 {
+        top: 49%;
+        left: 38%;
+    }
+    
+    .routes3 {
+        top: 56%;
+        left: 47%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    p {
+        text-align: justify;
+        font-size: .9rem;
+    }
+
+    .coments-container {
+        background-color: rgba(247, 241, 229, .8);
+    }
+
+    .user-name {
+        border-radius: 10px;
+    }
+}

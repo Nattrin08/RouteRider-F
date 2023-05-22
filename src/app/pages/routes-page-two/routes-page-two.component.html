@@ -1,0 +1,128 @@
+<!-- vista movil -->
+<section class="mobile-view">
+  <!-- imgen de fondo -->
+  <div class="background-img z-n1 position-fixed"></div>
+  <!-- componente mobile-header -->
+  <app-mobile-header class="z-1"></app-mobile-header>
+  <h2 class="title text-center mt-3 fw-bold">RUTAS DESTACADAS</h2>
+  <!-- mapa con los enlaces de las rutas -->
+  <div class="map text-center mt-3 position-relative">
+    <img src="/assets/img/map.png" alt="map" />
+    <a class="routes" href=""
+      ><h6 class="routes1 position-absolute">Punta Gallinas</h6></a
+    >
+    <a class="routes" (click)="tatacoaRedirection()"
+      ><h6 class="routes2 position-absolute">Desierto de la Tatacoa</h6></a
+    >
+    <a class="routes" href=""
+      ><h6 class="routes3 position-absolute">Caño Cristales</h6></a
+    >
+  </div>
+    <!-- componente mobile-footer -->
+  <app-mobile-footer class="position-absolute bottom-0 w-100"></app-mobile-footer>
+</section>
+
+<!-- vista desktop -->
+<section class="desktop-view w-100 h-100">
+  <!-- imgen de fondo -->
+  <div class="background-img z-n1 position-fixed"></div>
+  <!-- componente desktop-header -->
+  <app-desktop-header class="z-1"></app-desktop-header>
+  <!-- grid con el cuerpo de la página -->
+  <div class="row w-100 text-center mx-0">
+    <!-- columna izquierda -->
+    <div class="col position-relative" id="map">
+      <img class="map" src="/assets/img/map.png" alt="map"/>
+      <!-- enlaces a las distintas rutas -->
+      <a class="routes" href=""
+        ><h6 class="routes1 position-absolute">Punta Gallinas</h6></a
+      >
+      <a class="routes" href="#"
+        ><h6 class="routes2 position-absolute">Desierto de la Tatacoa</h6></a
+      >
+      <a class="routes" href=""
+        ><h6 class="routes3 position-absolute">Caño Cristales</h6></a
+      >
+    </div>
+    <!-- columna derecha -->
+    <div class="col">
+      <!-- google maps -->
+      <iframe class="tatacoa-map"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=
+        &q=desierto+tatacoa,Colombia&zoom=11">
+    </iframe>
+    </div>
+    <!-- columna derecha -->
+    <div class="position-relative mt-3">
+      <!-- carrusel de imagenes -->
+      <div
+        id="carouselAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img
+              src="/assets/img/tatacoa.jpg"
+              class="d-block w-100"
+              alt="tatacoa1"
+            />
+          </div>
+          <div class="carousel-item active">
+            <img
+              src="/assets/img/tatacoa2.jpg"
+              class="d-block w-100"
+              alt="tatacoa2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/img/tatacoa3.jpg"
+              class="d-block w-100"
+              alt="tatacoa3"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- parrafo con descripción de la ruta -->
+      <p class="pt-2">
+        El Desierto de la Tatacoa es considerado como uno de los principales
+        atractivos ambientales y turísticos del departamento del Huila, donde
+        los procesos de erosión, las plantas de cactus y arbustos espinosos, las
+        condiciones extremas del clima, y los hallazgos fósiles, llaman la
+        atención de visitantes interesados en la apreciación de la naturaleza.
+        Es la segunda zona árida más extensa de Colombia después de la Península
+        de La Guajira. "La Tatacoa", no es justamente un desierto, sino un
+        bosque seco tropical.
+      </p>
+    </div>
+  </div>
+  <!-- comentarios -->
+  <div class="row w-100 mt-2">
+    <div class="col"></div>
+  </div>
+  <!-- footer -->
+  <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer>
+</section>
