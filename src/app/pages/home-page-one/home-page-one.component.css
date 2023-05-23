@@ -1,0 +1,5 @@
+@import url("../../components/desktop-header/desktop-header.component.css");
+
+.no-visible{
+    display: none;
+}
