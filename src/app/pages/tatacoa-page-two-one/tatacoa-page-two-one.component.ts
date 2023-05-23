@@ -6,10 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tatacoa-page-two-one.component.css']
 })
 export class TatacoaPageTwoOneComponent {
-  commentUser: string = ""
-  @Input() userName: string = "";
 
-  ngOnInit() {
-    this.commentUser = this.userName;
-  }
+  selectedLocation: string = 'desierto+tatacoa,Colombia';
+
 }
