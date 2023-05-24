@@ -1,7 +1,7 @@
 <!-- vista movil -->
 <section class="mobile-view" *ngIf="isMobileView">
   <!-- imgen de fondo -->
-  <div class="background-img z-n1 position-fixed"></div>
+  <div class="background-img z-n1 position-fixed top-0"></div>
   <!-- componente mobile-header -->
   <app-mobile-header class="z-1"></app-mobile-header>
   <h2 class="title text-center mt-3 fw-bold">RUTAS DESTACADAS</h2>
@@ -16,9 +16,9 @@
 <!-- vista desktop -->
 <section class="desktop-view w-100 h-100" *ngIf="!isMobileView">
   <!-- imgen de fondo -->
-  <div class="background-img z-n1 position-fixed"></div>
+  <div class="background-img z-n1 position-fixed top-0 left-0"></div>
   <!-- componente desktop-header -->
-  <app-desktop-header class="z-1"></app-desktop-header>
+  <!-- <app-desktop-header class="z-1"></app-desktop-header> -->
   <!-- grid con el cuerpo de la página -->
   <div class="row w-100 text-center mx-0">
     <!-- columna izquierda -->
@@ -48,5 +48,5 @@
     </div>
   </div>
   <!-- footer -->
-  <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer>
+  <!-- <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer> -->
 </section>
