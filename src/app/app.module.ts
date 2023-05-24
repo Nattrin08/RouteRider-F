@@ -10,7 +10,9 @@ import { RoutesPageTwoComponent } from './pages/routes-page-two/routes-page-two.
 import { MobileFooterComponent } from './components/mobile-footer/mobile-footer.component';
 import { TatacoaPageTwoOneComponent } from './pages/tatacoa-page-two-one/tatacoa-page-two-one.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
-
+import { HomePageOneComponent } from './pages/home-page-one/home-page-one.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,19 @@ import { MapComponentComponent } from './components/map-component/map-component.
     RoutesPageTwoComponent,
     MobileFooterComponent,
     TatacoaPageTwoOneComponent,
-    MapComponentComponent
+    MapComponentComponent,
+    HomePageOneComponent,
+    DesktopHeaderComponent,
+    LoginPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
