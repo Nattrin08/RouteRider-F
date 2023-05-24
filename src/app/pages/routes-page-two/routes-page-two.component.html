@@ -1,29 +1,20 @@
 <!-- vista movil -->
-<section class="mobile-view">
+<section class="mobile-view" *ngIf="isMobileView">
   <!-- imgen de fondo -->
   <div class="background-img z-n1 position-fixed"></div>
   <!-- componente mobile-header -->
   <app-mobile-header class="z-1"></app-mobile-header>
   <h2 class="title text-center mt-3 fw-bold">RUTAS DESTACADAS</h2>
-  <!-- mapa con los enlaces de las rutas -->
+  <!-- google-maps -->
   <div class="map text-center mt-3 position-relative">
-    <img src="/assets/img/map.png" alt="map" />
-    <a class="routes" href=""
-      ><h6 class="routes1 position-absolute">Punta Gallinas</h6></a
-    >
-    <a class="routes" (click)="tatacoaRedirection()"
-      ><h6 class="routes2 position-absolute">Desierto de la Tatacoa</h6></a
-    >
-    <a class="routes" href=""
-      ><h6 class="routes3 position-absolute">Caño Cristales</h6></a
-    >
+    <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
   </div>
     <!-- componente mobile-footer -->
-  <app-mobile-footer class="position-absolute bottom-0 w-100"></app-mobile-footer>
+  <app-mobile-footer class="position-relative bottom-0 w-100"></app-mobile-footer>
 </section>
 
 <!-- vista desktop -->
-<section class="desktop-view w-100 h-100">
+<section class="desktop-view w-100 h-100" *ngIf="!isMobileView">
   <!-- imgen de fondo -->
   <div class="background-img z-n1 position-fixed"></div>
   <!-- componente desktop-header -->
@@ -33,29 +24,28 @@
     <!-- columna izquierda -->
     <div class="col">
       <!-- google maps -->
-      <app-map-component (markerClicked)="handleMarkerClick($event)"></app-map-component>
+      <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
     </div>
     <!-- columna derecha -->
-    <div class="col">
+    <div class="col d-flex flex-column justify-content-around">
+      <h3>{{ selectedTitle }}</h3>
       <!-- imagen del destino -->
-      <img class="w-75" [src]="selectedMarkerImage" alt="Imagen del marcador">
-      <!-- descripción del destino -->
-      <p class="pt-2 mb-4">{{ selectedMarkerParagraph }}</p>
-      <!-- <p class="pt-2 mb-4">
-        El Desierto de la Tatacoa es considerado como uno de los principales
-        atractivos ambientales y turísticos del departamento del Huila, donde
-        los procesos de erosión, las plantas de cactus y arbustos espinosos, las
-        condiciones extremas del clima, y los hallazgos fósiles, llaman la
-        atención de visitantes interesados en la apreciación de la naturaleza.
-        Es la segunda zona árida más extensa de Colombia después de la Península
-        de La Guajira. "La Tatacoa", no es justamente un desierto, sino un
-        bosque seco tropical.
-      </p> -->
+      <img class="w-100 h-100" [src]="selectedImage" alt="Imagen del marcador">
     </div>
+  </div>
+  <!-- descripción del destino -->
+  <div class="row pt-2 ps-2 pe-2 w-100">
+    <p>{{ selectedDescription }}</p>
+    <h4>Geografía y clima</h4>
+    <p>{{ selectedGeography }}</p>
+    <h4>Atractivos</h4>
+    <p class="mb-5">{{ selectedAttractions }}</p>
   </div>
   <!-- comentarios -->
   <div class="row w-100 mt-2">
-    <div class="col"></div>
+    <div class="col">
+
+    </div>
   </div>
   <!-- footer -->
   <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer>

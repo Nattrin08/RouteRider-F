@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 declare const google: any;
 
@@ -9,72 +10,52 @@ declare const google: any;
 
 })
 
-export class MapComponentComponent implements AfterViewInit {
-
+export class MapComponentComponent implements OnInit {
   constructor() {}
-
-  @Output() markerClicked: EventEmitter<string> = new EventEmitter<string>();
-
-  // ngOnInit() {
-  //   this.initMap();
-  // }
-
-  map!: google.maps.Map;
-  zoomLevels = {
-  small: 6,
-  medium: 8,
-  large: 10
-  };
-
-  ngAfterViewInit() {
-    this.initializeMap();
+  @Output() markerClicked: EventEmitter<number> = new EventEmitter<number>();
+  
+  ngOnInit() {
+    this.initMap();
   }
 
-  initializeMap() {
-    const mapOptions: google.maps.MapOptions = {
-      center: { lat: 5.9547, lng: -73.6728 }, // se utiliza a Barbosa para centrar el mapa y se vean los 3 marcadores
-      zoom: this.getZoomLevel(),
-    };
-
-    this.map = new google.maps.Map(
-      document.getElementById('map') as HTMLElement,
-      mapOptions
-    );
+  initMap() {
+    const colombia = { lat: 5.9547, lng: -73.6728 }; // se utiliza a Barbosa para centrar el mapa y se vean los 3 marcadores
+    const map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 5,
+      center: colombia
+    });
 
     const markers = [
       {
         title: 'Punta Gallinas',
         position: { lat: 12.4583, lng: -71.6606 },
-        url: 'marker1'
       },
       {
         title: 'Desierto de la Tatacoa',
         position: { lat: 3.1639, lng: -75.1703 },
-        url: 'marker2'
       },
       {
         title: 'Caño Cristales',
         position: { lat: 2.2236, lng: -73.7853 },
-        url: 'marker3'
       }
     ];
 
-    markers.forEach((marker) => {
+    markers.forEach((marker, index) => {
       const newMarker = new google.maps.Marker({
         position: marker.position,
-        map: this.map,
-        title: marker.title,
-        url: marker.url,
+        map: map,
+        title: marker.title
       });
+
       newMarker.addListener('click', () => {
-        this.markerClicked.emit(marker.url);
+        this.markerClicked.emit(index);
       });
       // Agregar evento para mostrar el título al pasar el cursor sobre el marcador
       newMarker.addListener('mouseover', function() {
         const infowindow = new google.maps.InfoWindow({
           content: marker.title
         });
-        infowindow.open(Map, newMarker);
+        infowindow.open(map, newMarker);
 
         // Cerrar el cuadro de información al quitar el cursor del marcador
         newMarker.addListener('mouseout', function() {
@@ -82,16 +63,6 @@ export class MapComponentComponent implements AfterViewInit {
         });
       });
     });
-  }
-  getZoomLevel(): number {
-    const windowWidth = window.innerWidth;
-    if (windowWidth < 576) {
-      return this.zoomLevels.small;
-    } else if (windowWidth < 992) {
-      return this.zoomLevels.medium;
-    } else {
-      return this.zoomLevels.large;
-    }
   }
 }
 
