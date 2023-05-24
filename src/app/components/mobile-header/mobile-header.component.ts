@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./mobile-header.component.css']
 })
 export class MobileHeaderComponent {
+  constructor(private router: Router) {};
 
+  routesRedirection() {
+    this.router.navigate(['/routes']);
+  }
 }
