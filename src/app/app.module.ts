@@ -13,6 +13,7 @@ import { MapComponentComponent } from './components/map-component/map-component.
 import { HomePageOneComponent } from './pages/home-page-one/home-page-one.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { ContactPageComponent } from './contact-page/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     HomePageOneComponent,
     DesktopHeaderComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
