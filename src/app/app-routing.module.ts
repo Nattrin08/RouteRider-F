@@ -5,6 +5,7 @@ import { TatacoaPageTwoOneComponent } from './pages/tatacoa-page-two-one/tatacoa
 import { HomePageOneComponent } from  './pages/home-page-one/home-page-one.component'
 
 const routes: Routes = [
+  {path:'',component: HomePageOneComponent},
   {path:'routes',component: RoutesPageTwoComponent},
   {path:'routes/desierto-tatacoa',component: TatacoaPageTwoOneComponent}
 ];
