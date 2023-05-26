@@ -3,14 +3,14 @@
   <!-- imgen de fondo -->
   <div class="background-img z-n1 position-fixed top-0"></div>
   <!-- componente mobile-header -->
-  <app-mobile-header class="z-1"></app-mobile-header>
+  <!-- <app-mobile-header class="z-1"></app-mobile-header> -->
   <h2 class="title text-center mt-3 fw-bold">RUTAS DESTACADAS</h2>
   <!-- google-maps -->
-  <div class="map text-center mt-3 position-relative">
-    <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
+  <div class="map">
+    <app-map-component (markerClicked)="redirection()"></app-map-component>
   </div>
     <!-- componente mobile-footer -->
-  <app-mobile-footer class="position-relative bottom-0 w-100"></app-mobile-footer>
+  <!-- <app-mobile-footer class="position-relative bottom-0 w-100"></app-mobile-footer> -->
 </section>
 
 <!-- vista desktop -->
@@ -23,30 +23,26 @@
   <div class="row w-100 text-center mx-0">
     <!-- columna izquierda -->
     <div class="col">
-      <!-- google maps -->
+      <!-- componente map-component -->
       <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
     </div>
     <!-- columna derecha -->
-    <div class="col d-flex flex-column justify-content-around">
-      <h3>{{ selectedTitle }}</h3>
+    <div class="col w-100 info p-0 rounded-3">
       <!-- imagen del destino -->
-      <img class="w-100 h-100" [src]="selectedImage" alt="Imagen del marcador">
+      <img class="rounded-3 w-100" [src]="selectedImage" alt="Imagen del marcador">
+      <h3 class="pt-4">{{ selectedTitle }}</h3>
+      <p>{{ selectedDescription }}</p>
+      <h4>Geografía y clima</h4>
+      <p>{{ selectedGeography }}</p>
+      <h4>Atractivos</h4>
+      <p>{{ selectedAttractions }}</p>
     </div>
-  </div>
-  <!-- descripción del destino -->
-  <div class="row pt-2 ps-2 pe-2 w-100">
-    <p>{{ selectedDescription }}</p>
-    <h4>Geografía y clima</h4>
-    <p>{{ selectedGeography }}</p>
-    <h4>Atractivos</h4>
-    <p class="mb-5">{{ selectedAttractions }}</p>
   </div>
   <!-- comentarios -->
-  <div class="row w-100 mt-2">
-    <div class="col">
-
-    </div>
+  <div class="comments-container w-100 mt-4 px-3">
+    <app-coments-box class="mb-5"></app-coments-box>
   </div>
+
   <!-- footer -->
   <!-- <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer> -->
 </section>

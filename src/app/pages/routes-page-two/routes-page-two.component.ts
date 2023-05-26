@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataSharingService } from 'src/app/services/data-sharing.service';
 
 
 @Component({
@@ -14,8 +15,11 @@ export class RoutesPageTwoComponent {
   public selectedGeography: string | undefined;
   public selectedAttractions: string | undefined;
 
-  constructor(private router: Router) {}
+  markerData: any;
 
+  constructor(private router: Router,) {}
+
+  // Verificar si el ancho del viewport para mostrar la vista movil o la desktop
   get isMobileView(): boolean {
     return window.innerWidth <= 992;
   }
@@ -24,10 +28,12 @@ export class RoutesPageTwoComponent {
     this.onMarkerClick(0);
   }
 
-  tatacoaRedirection() {
-    this.router.navigate(['/routes/desierto-tatacoa']);
+  // Redireccionar a la pagina route-description
+  public redirection() {
+    this.router.navigate(['/routes/description']);
   }
 
+  // Información de los lugares para los 3 marcadores
   public markersData = [
     {
       title: 'Punta Gallinas',
@@ -60,14 +66,16 @@ export class RoutesPageTwoComponent {
         'Sin lugar a duda, el mayor atractivo en Caño Cristales son sus transparentes aguas y sus colores y la belleza de su paisaje. No por poco se le cataloga como el rio más hermoso del mundo. Si bien es difícil llegar a este encantador lugar, será compensado con una experiencia inolvidable en la que podrá disfrutar de la paz y tranquilidad de un ambiente natural con unas de las mejores aguas y paisajes del mundo.',
     }
   ];
-
+  
+  // Mostrar la info en el template
   public onMarkerClick(index: number) {
-    const markerData = this.markersData[index];
-    this.selectedTitle = markerData.title;
-    this.selectedImage = markerData.image;
-    this.selectedDescription = markerData.description;
-    this.selectedGeography = markerData.geography;
-    this.selectedAttractions = markerData.attractions;
+    this.markerData = this.markersData[index];
+    console.log(this.markerData);
+    this.selectedTitle = this.markerData.title;
+    this.selectedImage = this.markerData.image;
+    this.selectedDescription = this.markerData.description;
+    this.selectedGeography = this.markerData.geography;
+    this.selectedAttractions = this.markerData.attractions;
   }
   
 }
