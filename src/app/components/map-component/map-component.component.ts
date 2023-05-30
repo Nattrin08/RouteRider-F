@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 declare const google: any;
 
@@ -11,18 +10,31 @@ declare const google: any;
 })
 
 export class MapComponentComponent implements OnInit {
-  constructor() {}
+
   @Output() markerClicked: EventEmitter<number> = new EventEmitter<number>();
+  zoom!: number;
   
   ngOnInit() {
+    // Inicializa el mapa
     this.initMap();
   }
 
+  // Deternina el zoom del mapa dependiendo de la ventana del navegador
+  mapZoom() {
+    if (window.innerWidth <= 576) {
+      this.zoom = 5;
+    } else {
+      this.zoom = 6;
+    };
+    return this.zoom;
+  }
+
+  // Crea el mapa y agrega los marcadores
   initMap() {
-    const colombia = { lat: 5.9547, lng: -73.6728 }; // se utiliza a Barbosa para centrar el mapa y se vean los 3 marcadores
+    const colombia = { lat: 5.6170, lng: -73.8212 }; // centrar el mapa con los 3 marcadores
     const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: colombia
+      zoom: this.mapZoom(),
+      center: colombia,
     });
 
     const markers = [
@@ -46,7 +58,7 @@ export class MapComponentComponent implements OnInit {
         map: map,
         title: marker.title
       });
-
+      // Agregar evento que muestra la info del lugar selecionado en el mapa al hacer click en un marcador
       newMarker.addListener('click', () => {
         this.markerClicked.emit(index);
       });
@@ -63,7 +75,7 @@ export class MapComponentComponent implements OnInit {
         });
       });
     });
-  }
+  };
 }
 
 
