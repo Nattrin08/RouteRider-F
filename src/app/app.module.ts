@@ -44,4 +44,4 @@ import { ComentsBoxComponent } from './components/coments-box/coments-box.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
