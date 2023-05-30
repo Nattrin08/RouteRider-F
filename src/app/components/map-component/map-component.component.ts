@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { DataSharingService } from 'src/app/services/data-sharing.service';
 
 declare const google: any;
 
@@ -32,7 +31,7 @@ export class MapComponentComponent implements OnInit {
 
   // Crea el mapa y agrega los marcadores
   initMap() {
-    const colombia = { lat: 5.6170, lng: -73.8212 }; // centrar el mapa y se vean los 3 marcadores
+    const colombia = { lat: 5.6170, lng: -73.8212 }; // centrar el mapa con los 3 marcadores
     const map = new google.maps.Map(document.getElementById('map'), {
       zoom: this.mapZoom(),
       center: colombia,

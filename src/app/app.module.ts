@@ -16,8 +16,6 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page/contact-page.component';
 import { ComentsBoxComponent } from './components/coments-box/coments-box.component';
-import { RouteDescriptionPageComponent } from './pages/route-description-page/route-description-page.component';
-import { DescriptionComponent } from './components/description/description.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +31,7 @@ import { DescriptionComponent } from './components/description/description.compo
     LoginPageComponent,
     RegisterPageComponent,
     ContactPageComponent,
-    ComentsBoxComponent,
-    RouteDescriptionPageComponent,
-    DescriptionComponent
+    ComentsBoxComponent
   ],
   imports: [
     BrowserModule,

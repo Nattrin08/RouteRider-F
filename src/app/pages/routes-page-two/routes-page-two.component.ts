@@ -1,7 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataSharingService } from 'src/app/services/data-sharing.service';
-
 
 @Component({
   selector: 'app-routes-page-two',
@@ -17,8 +15,6 @@ export class RoutesPageTwoComponent {
 
   markerData: any;
 
-  constructor(private router: Router,) {}
-
   // Verificar si el ancho del viewport para mostrar la vista movil o la desktop
   get isMobileView(): boolean {
     return window.innerWidth <= 992;
@@ -26,11 +22,6 @@ export class RoutesPageTwoComponent {
 
   ngOnInit() {
     this.onMarkerClick(0);
-  }
-
-  // Redireccionar a la pagina route-description
-  public redirection() {
-    this.router.navigate(['/routes/description']);
   }
 
   // Información de los lugares para los 3 marcadores
@@ -70,7 +61,6 @@ export class RoutesPageTwoComponent {
   // Mostrar la info en el template
   public onMarkerClick(index: number) {
     this.markerData = this.markersData[index];
-    console.log(this.markerData);
     this.selectedTitle = this.markerData.title;
     this.selectedImage = this.markerData.image;
     this.selectedDescription = this.markerData.description;
