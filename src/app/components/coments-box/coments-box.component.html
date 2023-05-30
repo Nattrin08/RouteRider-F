@@ -1,0 +1,24 @@
+<div>
+    <h3>Comentarios</h3>
+    <div *ngIf="comments.length === 0">No hay comentarios</div>
+    <ul>
+      <li *ngFor="let comment of comments">
+        <strong>{{ comment.author }} {{ comment.date }}</strong>: {{ comment.message }}
+      </li>
+    </ul>
+    <hr>
+    <div class="mb-5">
+      <h3>Agregar un comentario</h3>
+      <form (ngSubmit)="addComment()">
+        <div>
+          <h3 type="text" [(ngModel)]="newComment.author"></h3>
+        </div>
+        <div>
+          <label>Mensaje:</label>
+          <textarea class="w-100" [(ngModel)]="newComment.message" name="message" required></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Agregar comentario</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,52 +1,35 @@
-<!-- vista movil -->
-<section class="mobile-view" *ngIf="isMobileView">
+<section class="w-100 h-100">
   <!-- imgen de fondo -->
   <div class="background-img z-n1 position-fixed top-0"></div>
-  <!-- componente mobile-header -->
-  <app-mobile-header class="z-1"></app-mobile-header>
-  <h2 class="title text-center mt-3 fw-bold">RUTAS DESTACADAS</h2>
-  <!-- google-maps -->
-  <div class="map text-center mt-3 position-relative">
-    <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
-  </div>
-    <!-- componente mobile-footer -->
-  <app-mobile-footer class="position-relative bottom-0 w-100"></app-mobile-footer>
-</section>
-
-<!-- vista desktop -->
-<section class="desktop-view w-100 h-100" *ngIf="!isMobileView">
-  <!-- imgen de fondo -->
-  <div class="background-img z-n1 position-fixed top-0 left-0"></div>
-  <!-- componente desktop-header -->
-  <!-- <app-desktop-header class="z-1"></app-desktop-header> -->
-  <!-- grid con el cuerpo de la página -->
-  <div class="row w-100 text-center mx-0">
+  <h2 class="pt-md-2">RUTAS DESTACADAS</h2>
+  <div class="row row-cols-1 row-cols-lg-2 w-100 mx-0">
     <!-- columna izquierda -->
-    <div class="col">
-      <!-- google maps -->
+    <div class="col px-0 px-lg-2">
+      <!-- componente map-component -->
       <app-map-component (markerClicked)="onMarkerClick($event)"></app-map-component>
     </div>
-    <!-- columna derecha -->
-    <div class="col d-flex flex-column justify-content-around">
-      <h3>{{ selectedTitle }}</h3>
-      <!-- imagen del destino -->
-      <img class="w-100 h-100" [src]="selectedImage" alt="Imagen del marcador">
+    <div class="col px-0 px-lg-2">
+      <div class="info rounded-3">
+        <h3 class="mobile-title pt-3">{{ selectedTitle }}</h3>
+        <img class="rounded-3 w-100" [src]="selectedImage" alt="Imagen del marcador">
+        <h3 class="desktop-title pt-lg-3">{{ selectedTitle }}</h3>
+        <p class="pt-2">{{ selectedDescription }}</p>
+        <h4>Geografía y clima</h4>
+        <p>{{ selectedGeography }}</p>
+        <h4>Atractivos</h4>
+        <p>{{ selectedAttractions }}</p>
+      </div>
     </div>
-  </div>
-  <!-- descripción del destino -->
-  <div class="row pt-2 ps-2 pe-2 w-100">
-    <p>{{ selectedDescription }}</p>
-    <h4>Geografía y clima</h4>
-    <p>{{ selectedGeography }}</p>
-    <h4>Atractivos</h4>
-    <p class="mb-5">{{ selectedAttractions }}</p>
   </div>
   <!-- comentarios -->
-  <div class="row w-100 mt-2">
-    <div class="col">
-
-    </div>
+  <div class="comments-container w-100 pt-lg-4 px-2">
+    <app-coments-box class="mb-5"></app-coments-box>
   </div>
-  <!-- footer -->
-  <!-- <app-desktop-footer class="position-fixed bottom-0 w-100"></app-desktop-footer> -->
 </section>
+      <!-- <img class="rounded-3 w-100" [src]="selectedImage" alt="Imagen del marcador">
+      <h3 class="pt-4">{{ selectedTitle }}</h3>
+      <p>{{ selectedDescription }}</p>
+      <h4>Geografía y clima</h4>
+      <p>{{ selectedGeography }}</p>
+      <h4>Atractivos</h4>
+      <p>{{ selectedAttractions }}</p> -->
