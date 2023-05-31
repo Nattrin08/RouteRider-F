@@ -31,7 +31,6 @@
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@angular-buddies/prettier": "^1.0.0-alpha.3",
     "@angular-devkit/build-angular": "^16.0.0",
     "@angular/cli": "~16.0.0",
     "@angular/compiler-cli": "^16.0.0",
