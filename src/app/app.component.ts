@@ -15,9 +15,11 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         this.listoocu = event.url === "/"
       }
-    });
-    
-
+    });    
   }
 
+  // Verificar si el ancho del viewport para mostrar la vista movil o la desktop
+  get isMobileView(): boolean {
+    return window.innerWidth <= 992;
+  }
 }
