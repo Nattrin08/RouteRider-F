@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 
 export class HomePageOneComponent {
   heightDevice: number;
+  videoPath: string ="assets/vid/video1.mp4";
+  videoPath2: string ="assets/vid/video3.mp4";
   //Crea o asigna los valores que se estan asignando en la clase
   constructor(private router: Router) {
     this.heightDevice = window.innerHeight;

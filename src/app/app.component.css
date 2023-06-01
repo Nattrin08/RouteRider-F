@@ -1,0 +1,4 @@
+app-desktop-footer{
+    /* profundidad -  para que el footer quede por encima de home*/
+    z-index: 1;
+}

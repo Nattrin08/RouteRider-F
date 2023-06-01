@@ -9,7 +9,7 @@ section {
 }
 
 .col1 {
-  margin-top: 6%;
+  margin-top: 7%;
   padding: 0;
 }
 
@@ -18,6 +18,13 @@ section {
   padding: 0;
 }
 
+video{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; 
+  height: auto;
+}
 
 /* Esto asegurará que las imágenes llenen cada contenedores */
 img {
