@@ -1,5 +1,75 @@
 @import url("../../components/desktop-header/desktop-header.component.css");
 
-.no-visible{
+/* .no-visible{
     display: none;
+} */
+
+section {
+  position: relative;
+}
+
+.col1 {
+  margin-top: 6%;
+  padding: 0;
+}
+
+.col2 {
+  margin-top: 0;
+  padding: 0;
+}
+
+
+/* Esto asegurará que las imágenes llenen cada contenedores */
+img {
+  width: 100%; 
+  height: auto;
+}
+
+/* Superponer el título */
+.menu-listing {
+  position: relative;
+}
+
+/* estilo al título */
+.menu-title { 
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .10s;
+  background: rgba(231,177,10,0.6);
+  color: white;
+  
+  /* Posicion del texto en el medio*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+/* Líneas borrosas */
+.menu-image img {
+  filter: blur(0px);
+  transition: filter 0.10s ease-in;
+  transform: scale(1.1);
+}
+
+
+/* Ocultar el título */
+.menu-listing:hover .menu-title {
+  opacity: 1;
+}
+
+.menu-listing:hover .menu-image img {
+  filter: blur(1px);
 }
