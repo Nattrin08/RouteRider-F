@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class DesktopHeaderComponent {
   //input ingreso de datos de un componente padre - el appcomponent es el padre
   @Input() ocultarLista = false;
-  userName = "Mauricio";
+  userName = 'User';
 }
