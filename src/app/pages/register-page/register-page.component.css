@@ -16,7 +16,7 @@ div input {
 }
 
 .short-input {
-  width: 450px;
+  width: 21rem;
   margin: 0 auto;
 }
 
@@ -26,10 +26,11 @@ div input {
   justify-content: center;
   align-items: center;
   background: #e7b10a;
-  border-radius: 15px;
+  border-radius: 0.938rem;
   border-color: #e7b10a;
   color: #000000;
   width: 100%;
+  z-index: -1;
 }
 
 .login-button:active {
@@ -47,7 +48,7 @@ div input {
 }
 
 .form-control-with-radio .form-control {
-  padding-right: 32px;
+  padding-right: 2rem;
 }
 
 .form-control-with-radio .radio-buttons {
@@ -55,26 +56,26 @@ div input {
   align-items: center;
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 0.5rem;
   transform: translateY(-50%);
 }
 
 .form-control-with-radio .radio-label {
   display: flex;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .form-control-with-radio .radio-label input[type="radio"] {
-  margin-right: 5rem;
+  margin-right: 2rem;
   margin-top: 1.5rem;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  border: 2px solid #aa8306;
+  border: 0.125rem solid #aa8306;
   background-color: white;
 }
 
