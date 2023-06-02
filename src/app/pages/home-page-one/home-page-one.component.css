@@ -4,7 +4,7 @@
     display: none;
 } */
 
- /* .col1 {
+/* .col1 {
   margin-top: 5%;
   /* padding: 0;
   position: relative;
@@ -19,11 +19,15 @@ img {
   width: 100%;
 }
 
-.v1,.v2,.v3,.v4,.v5{
-position: absolute;
+.v1,
+.v2,
+.v3,
+.v4,
+.v5 {
+  position: absolute;
 }
 
-.v1{
+.v1 {
   top: 40%;
 }
 
@@ -33,8 +37,8 @@ position: absolute;
     /* left: 50%; */
     /* transform: translateX(50%); */
     width: 100%;
-    height: 44vh;
-    /* object-fit: cover; */
+    height: 100%;
+    object-fit: cover;
   }
 
   .desktop {
@@ -47,24 +51,23 @@ position: absolute;
     /* left: 50%; */
     /* transform: translateX(50%); */
     width: 100%;
-    height: 49vh;
+    height: 100%;
     background-color: black;
-    /* object-fit: cover; */
+    object-fit: cover;
   }
 
   img {
     width: 100%;
     height: 45vh;
     background-color: black;
-
   }
 
-  .col-4{
+  .col-4 {
     padding: 0;
     position: relative;
   }
 
-  .colv1{
+  .colv1 {
     background-color: black;
   }
   /* Esto asegurará que las imágenes llenen cada contenedores */

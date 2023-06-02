@@ -6,11 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './home-page-one.component.html',
   styleUrls: ['./home-page-one.component.css']
 })
-
 export class HomePageOneComponent {
   heightDevice: number;
-  videoPath: string ="assets/vid/video1.mp4";
-  videoPath2: string ="assets/vid/video3.mp4";
+  videoPath: string = 'assets/vid/videoHome1.m4v';
+  videoPath2: string = 'assets/vid/videoHome2.m4v';
 
   get isMobileView(): boolean {
     return window.innerWidth <= 992;
@@ -20,7 +19,7 @@ export class HomePageOneComponent {
     this.heightDevice = window.innerHeight;
   }
   @HostListener('window:resize', ['$event'])
-  //oR - ejecuta lo que se determina en el decorador   
+  //oR - ejecuta lo que se determina en el decorador
   onResize(event: any) {
     //event.target.innerHeight = define el alto de la ventana en la que se esta presentando
     this.heightDevice = event.target.innerHeight;
