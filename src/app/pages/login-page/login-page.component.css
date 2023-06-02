@@ -8,13 +8,34 @@
 }
 
 .login-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #e7b10a;
   border-radius: 15px;
   border-color: #e7b10a;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
+  font-size: 23px;
   color: #000000;
+}
+
+.login-button:active {
+  background: #aa8306;
+  border-color: #aa8306;
+  color: #ffffff;
+}
+
+.login-container {
+  margin-top: 16rem;
+}
+
+.login-input {
+  height: 3rem;
+  padding-bottom: 5rem;
+}
+
+.login-input-container {
+  padding: 3rem 0 3rem 3rem;
 }
 
 .input-group {
