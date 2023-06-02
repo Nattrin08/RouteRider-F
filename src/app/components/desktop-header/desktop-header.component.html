@@ -1,0 +1,27 @@
+<header class="container-fluid sticky-top">
+      <div class="row w-100">
+        <div class="col-5">
+          <ul  class="no-visible d-flex mt-5 mb-5" *ngIf="!ocultarLista">
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a href="/">Inicio</a></li>
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a routerLink="/routes">Rutas destacadas</a></li>
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a routerLink="/login-page">Inicio de sesión</a></li>
+          </ul>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3">
+          <ul class="no-visible d-flex mt-5 mb-5" *ngIf="!ocultarLista">
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a routerLink="/register-page">Registro</a></li>
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a routerLink="/contact">Contacto</a></li>
+            <li class="mt-1 mb-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a href="/"></a></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <ul class="d-flex mt-5 mb-5 text-end">
+            <li class="li-gest mt-1 mb-5 mx-5 mx-lg-2 mx-xl-3 mx-xxl-4"><a href="/">{{userName}}</a></li>
+            <li class="li-img">
+              <a href=""><img src="/assets/icons/person-circle.svg" alt="person-circle" class="person-circle"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+</header>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,300;1,700&display=swap');
+
+body{
+    background-image: url(../../../../assets/img/contact-page-background.png);
+    font-family: 'Josefin Sans', sans-serif;
+    background-size: cover;
+}
+
+/* Estilos para el contenedor que tiene todos los elementos */
+.contenedor_principal {
+    display: flex;
+    justify-content: center;
+    gap: 50px;  
+}
+/* Estilos para el recuadro donde está el texto de registro y el botón de iniciar sesión */
+.contenedor_registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #F7F1E5;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-right: 50px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: left;
+    width: 550px;
+    height: 300px;
+}
+h1{
+    font-size: 50px;
+    font-style: bold;
+    font-weight: 700;
+    color: #2a2907;
+}
+.beneficios_registro{
+    font-size: 20px;
+}
+.boton_login_signup {
+    width: 40%;
+    height: 50px;
+    background-color: #8980214b;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 10px;
+}
+.contenedor_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-top: 50px;
+    width: 500px;
+    background-color: #F7F1E5;
+    justify-content: space-between;
+    padding: 20px;
+    height: 650px;
+}
+.campos_form {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+input{
+    padding: 80px;
+    height: 50px;
+}
+.campo_mensaje{
+    padding: 80px;
+}
+.btn_ingresar {
+    align-self: center;
+}
+.checkbox{
+    margin-top: 10px;
+    align-self: center;
+}
+
+/* Estilos para el responsive design */
+@media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+    .contenedor_principal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_registro{
+        max-width: 500px;
+        margin-left: 40px;
+        height: 250px;
+    }
+    .contenedor_form{
+        max-width: 500px;
+        margin-bottom: 50px;
+        margin-top: 0;
+        background-color: rgb(231, 232, 219);
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor_principal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_registro{
+        max-width: 400px;
+        margin-left: 50px;
+        height: 250px;
+    }
+    .contenedor_form{
+        max-width: 350px;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    .boton_login_signup{
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+        
+}
