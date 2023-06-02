@@ -1,0 +1,83 @@
+.background-img {
+  background: url("/assets/img/image4.png");
+  opacity: 0.55;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+div input {
+  border-color: black;
+  margin-bottom: 1.5rem;
+}
+
+.login-container {
+  margin-top: 16rem;
+}
+
+.login-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e7b10a;
+  border-radius: 15px;
+  border-color: #e7b10a;
+  color: #000000;
+  width: 100%;
+}
+
+.login-button:active {
+  background: #aa8306;
+  border-color: #aa8306;
+  color: #ffffff;
+}
+
+.input-group {
+  display: flex;
+}
+
+.form-control-with-radio {
+  position: relative;
+}
+
+.form-control-with-radio .form-control {
+  padding-right: 32px;
+}
+
+.form-control-with-radio .radio-buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+.form-control-with-radio .radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.form-control-with-radio .radio-label input[type="radio"] {
+  margin-right: 5rem;
+  margin-top: 1.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #aa8306;
+  background-color: white;
+}
+
+.form-control-with-radio .radio-text {
+  order: -1;
+  margin-right: 1rem;
+}
+
+.form-control-with-radio .radio-label input[type="radio"]:checked {
+  background-color: #e7b10a;
+}
