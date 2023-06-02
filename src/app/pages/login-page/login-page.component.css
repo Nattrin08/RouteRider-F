@@ -45,3 +45,8 @@
 .input-group .btn {
   flex-grow: 1;
 }
+
+.short-input {
+  width: 450px;
+  margin: 0 auto;
+}
