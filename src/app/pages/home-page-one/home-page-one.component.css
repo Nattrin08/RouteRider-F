@@ -4,35 +4,75 @@
     display: none;
 } */
 
-section {
+ /* .col1 {
+  margin-top: 5%;
+  /* padding: 0;
   position: relative;
+} */
+
+/* .col2 {
+  margin-top: 0;
+  padding: 0;
+} */
+
+img {
+  width: 100%;
 }
 
-.col1 {
-  margin-top: 7%;
-  padding: 0;
+.v1,.v2,.v3,.v4,.v5{
+position: absolute;
 }
 
-.col2 {
-  
-  padding: 0;
+.v1{
+  top: 40%;
 }
 
 @media (min-width: 992px) {
-  video {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  .video1 {
+    /* position: fixed; */
+    /* left: 50%; */
+    /* transform: translateX(50%); */
     width: 100%;
-    height: auto;
+    height: 44vh;
+    /* object-fit: cover; */
   }
 
-  /* Esto asegurará que las imágenes llenen cada contenedores */
+  .desktop {
+    top: 10%;
+    bottom: 25px;
+  }
+
+  .video2 {
+    /* position: fixed; */
+    /* left: 50%; */
+    /* transform: translateX(50%); */
+    width: 100%;
+    height: 49vh;
+    background-color: black;
+    /* object-fit: cover; */
+  }
+
   img {
     width: 100%;
-    height: auto;
+    height: 45vh;
+    background-color: black;
+
+  }
+
+  .col-4{
+    padding: 0;
     position: relative;
   }
+
+  .colv1{
+    background-color: black;
+  }
+  /* Esto asegurará que las imágenes llenen cada contenedores */
+  /* img {
+    width: 100%;
+    height: 40vh;
+    /* position: relative;
+  } */
 
   /* Superponer el título */
   .menu-listing {
