@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomePageOneComponent {
   heightDevice: number;
-  videoPath: string = 'assets/vid/videoHome1.mp4';
-  videoPath2: string = 'assets/vid/videoHome2.mp4';
+  videoPath: string = 'assets/vid/videoHome1.m4v';
+  videoPath2: string = 'assets/vid/videoHome2.m4v';
 
   get isMobileView(): boolean {
     return window.innerWidth <= 992;
