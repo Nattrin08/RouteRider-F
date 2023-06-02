@@ -1,8 +1,8 @@
 <section class="container-fluid" [style.height.px]="heightDevice">
-    <div class="row" style="gap:0;">
+    <div class="row row-cols-1 row-cols-lg-3" style="gap:0;">
         <div class="col1 col">
             <article class="menu-listing">
-                <a class="menu-title" role="button" (click)="routesRedirections()">
+                <a class="menu-title" role="button" routerLink="/routes">
                     RUTAS DESTACADAS
                 </a>
                 <div class="menu-image">
@@ -14,7 +14,7 @@
         </div>
         <div class="col1 col">
             <article class="menu-listing">
-                <a class="menu-title" role="button" (click)="logInRedirections()" >
+                <a class="menu-title" role="button" routerLink="/login-page">
                     INICIO DE SESIÓN
                 </a>
                 <div class="menu-image">
@@ -26,17 +26,21 @@
         </div>
         <div class="col1 col">
             <!-- <video src="/src/assets/vid/video1.mp4" type="video/mp4" controls autoplay></video> -->
-            <video controls autoplay loop><source [src]="videoPath" type="video/mp4"></video>
+            <video controls autoplay loop>
+                <source [src]="videoPath" type="video/mp4">
+            </video>
         </div>
     </div>
-    <div class="row">
+    <div class="row row-cols-1 row-cols-lg-3">
         <div class="col2 col">
             <!-- <video src="/src/assets/vid/video3.mov" alt="video3" autoplay muted loop></video> -->
-            <video controls autoplay loop><source [src]="videoPath2" type="video/mp4"></video>
+            <video controls autoplay loop>
+                <source [src]="videoPath2" type="video/mp4">
+            </video>
         </div>
         <div class="col2 col">
             <article class="menu-listing">
-                <a class="menu-title" role="button" (click)="signUpRedirections()">
+                <a class="menu-title" role="button" routerLink="/register-page">
                     REGISTRO
                 </a>
                 <div class="menu-image">
@@ -48,7 +52,7 @@
         </div>
         <div class="col2 col">
             <article class="menu-listing">
-                <a class="menu-title" role="button" (click)="contactRedirections()">
+                <a class="menu-title" role="button" routerLink="/contact">
                     CONTACTO
                 </a>
                 <div class="menu-image">
@@ -60,3 +64,38 @@
         </div>
     </div>
 </section>
+
+
+<!-- 
+<section>
+    <div>
+        <img src="/assets/img/image5-1" alt="primerafoto">
+    </div>
+    <div>
+        <img src="/assets/img/Vector1" alt="vector">
+    </div>
+    <div>
+        <img src="/assets/img/image2" alt="segundafoto">
+    </div>
+    <div>
+        <img src="/assets/img/Vector1" alt="vector">
+    </div>
+    <div>
+        <img src="/assets/img/image6" alt="tercerafoto">
+    </div>
+    <div>
+        <img src="/assets/img/Vector1" alt="vector">
+    </div>
+    <div>
+        <img src="/assets/img/image8" alt="cuartafoto">
+    </div>
+    <div>
+        <img src="/assets/img/Vector1" alt="vector">
+    </div>
+     <div>
+        <img src="/assets/img/front-view-motorcycle-helmet-sitting-bike" alt="quintafoto">
+    </div>
+    <div>
+        <img src="/assets/img/Vector1" alt="vector">
+    </div>
+</section> -->
