@@ -16,7 +16,7 @@ export class ComentsBoxComponent {
   today: Date = new Date();
 
   comments: Comment[] = [];
-  newComment: Comment = { author: 'Invitado', message: '', date: this.today.toLocaleString() };
+  newComment: Comment = { author: '', message: '', date: this.today.toLocaleString() };
 
   addComment() {
     if (this.newComment.message.trim() !== '') {
