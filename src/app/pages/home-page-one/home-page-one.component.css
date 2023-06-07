@@ -18,9 +18,9 @@
   display: flex;
 }*/
 
-.content{
-  height: 300px ;
-  width: 100% ;
+.content {
+  height: 300px;
+  width: 100%;
   margin: 0 0 0 0;
   /* margin-bottom: 10%; */
 }
@@ -31,7 +31,7 @@
   background-image: url("../../../assets/img/image6.jpg") ;
 }*/
 
-.vector-info{
+.vector-info {
   background-image: url("../../../assets/img/Vector1.png");
   height: 130px;
   width: 100%;
@@ -42,23 +42,30 @@
   background-position: center;
   background-size: cover;
   position: absolute;
- 
-} 
-
-h2{
-  text-align: center;
-  position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-p{
-  text-align: justify;
+h4 {
+  text-align: center;
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2{
+  text-align:center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  text-align: center;
+  position: absolute;
+  top: 35%;/*
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 img {
