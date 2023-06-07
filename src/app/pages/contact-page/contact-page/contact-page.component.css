@@ -11,7 +11,7 @@ body{
 .contenedor_principal {
     display: flex;
     justify-content: center;
-    gap: 50px;  
+    gap: 50px;
 }
 /* Estilos para el recuadro donde está el texto de registro y el botón de iniciar sesión */
 .contenedor_registro {
@@ -121,5 +121,5 @@ input{
         font-weight: 700;
         border-radius: 10px;
     }
-        
+
 }
