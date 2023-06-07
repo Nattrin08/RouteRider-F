@@ -18,6 +18,10 @@
   display: flex;
 }*/
 
+@media (max-width: 992px) {
+
+
+
 .content {
   height: 300px;
   width: 100%;
@@ -96,8 +100,9 @@ img {
 .v5 {
   top: 45%;
 }
+}
 
-@media (min-width: 992px) {
+@media (min-width: 993px) {
   .video1 {
     /* position: fixed; */
     /* left: 50%; */
