@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,300;1,700&display=swap');
 
 body{
-    background-image: url(../../../../assets/img/contact-page-background.png);
+    background-image: url(../../../../assets/img/image2.jpg);
     font-family: 'Josefin Sans', sans-serif;
     background-size: cover;
 }
@@ -10,7 +10,7 @@ body{
 .contenedor_principal {
     display: flex;
     justify-content: center;
-    gap: 50px;  
+    gap: 50px;
 }
 /* Estilos para el recuadro donde está el texto de registro y el botón de iniciar sesión */
 .contenedor_registro {
@@ -120,5 +120,5 @@ input{
         font-weight: 700;
         border-radius: 10px;
     }
-        
+
 }
