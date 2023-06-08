@@ -1,5 +1,5 @@
 .background-img {
-  background: url("/assets/img/image4.png");
+  background: url("/assets/img/image4.jpg");
   opacity: 0.55;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +7,7 @@
   height: 100%;
 }
 div input {
-  border-color: black;
+  border-color: #4C4B16;
   margin-bottom: 1.5rem;
 }
 
@@ -16,7 +16,13 @@ div input {
 }
 
 .short-input {
-  width: 21rem;
+  width: 27rem;
+  margin: 0 auto;
+  background-color: #F7F1E5;
+}
+
+.short-btn {
+  width: 27rem;
   margin: 0 auto;
 }
 
@@ -25,7 +31,7 @@ div input {
   justify-content: center;
   align-items: center;
   background: #e7b10a;
-  border-radius: 0.938rem;
+  border-radius: 0.5rem;
   border-color: #e7b10a;
   color: #000000;
   width: 100%;
@@ -44,6 +50,7 @@ div input {
 
 .form-control-with-radio {
   position: relative;
+  border-radius: 0.938rem;
 }
 
 .form-control-with-radio .form-control {
