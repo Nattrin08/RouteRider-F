@@ -27,6 +27,7 @@ div input {
 }
 
 .login-button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
