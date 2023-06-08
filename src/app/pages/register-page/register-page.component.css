@@ -94,3 +94,27 @@ div input {
 .form-control-with-radio .radio-label input[type="radio"]:checked {
   background-color: #e7b10a;
 }
+
+@media only screen and (max-width: 480px) {
+.login-container{
+  margin-top: 3rem;
+  padding: 0 1rem 0 1rem;
+}
+  .short-input {
+    width: 25rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .login-container{
+    margin-top: 3rem;
+    padding: 0 1rem 0 1rem;
+  }
+  .short-input {
+    width: 30rem;
+  }
+  .short-btn {
+    width: 30rem;
+    margin: 0 auto;
+  }
+}
