@@ -1,41 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,300;1,700&display=swap');
-
-body{
-    background-image: url(../../../../assets/img/contact-page-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;    
-}
+.background-img {
+        background: url('../../../../assets/img/image2.jpg');
+        opacity: 0.55;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }   
 
 /* Estilos para el contenedor que tiene todos los elementos */
 .contenedor_principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 50px; */
+    position: absolute;
+    top: 15%;
 }
 /* Estilos para el recuadro donde está el texto de registro y el botón de iniciar sesión */
 .contenedor_registro {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    background-color: #F7F1E5;
-    padding: 10px 40px;
-    border-radius: 30px;
-    margin-right: 50px;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: left;
-    width: 550px;
-    height: 300px;
+    background-color: rgba(247, 241, 229, .4);
+    border-radius: 15px;
 }
+
 h1{
-    font-size: 50px;
+    font-size: 35px;
     font-style: bold;
-    font-weight: 700;
-    color: #2a2907;
+    color: #000000;
+    text-align: center;
+    padding-top: 15px;
 }
 .beneficios_registro{
     font-size: 20px;
+    text-align: center;
+    padding:0px 15px;
 }
 .boton_login_signup {
     width: 40%;
@@ -46,15 +39,11 @@ h1{
     border-radius: 10px;
 }
 .contenedor_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    margin-top: 200px;
-    width: 500px;
-    background-color: #F7F1E5;
-    justify-content: space-between;
+    background-color: rgba(247, 241, 229, .4);
+    margin-top: 20px;
+    width: 100%;
     padding: 20px;
-    height: 500px;
+    border-radius: 15px;
 }
 .campos_form {
     margin-top: 8px;
@@ -62,70 +51,50 @@ h1{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
 }
-input{
+input,textarea{
     padding: 20px;
     height: 50px;
     font-family: 'Josefin Sans', sans-serif;
+    background-color:#f7f1e5;
 }
-.campo_mensaje{
-    padding: 50px;
-}
-.btn_ingresar {
+
+.btn{
     align-self: center;
-    margin-top: 10px;
-}
-.checkbox{
-    margin-top: 10px;
-    align-self: center;
+    margin-top: 20px;
+    background: #e7b10a;
+    border-color: #e7b10a;
+    color: black;
+
 }
 
-/* Estilos para el responsive design */
-@media screen and (max-width: 850px){
-      
-    .contenedor_principal{
-        flex-direction: column;
-        align-items: center;
+@media (min-width: 576px){
+    h1{
+        font-size: 50px;
+        font-weight: 500px;
     }
-    .contenedor_registro{
-        max-width: 500px;
-        margin-left: 40px;
-        height: 170px;
-        width: 500px;
-        background-color: #F7F1E5;
-        
-    }
-    .contenedor_form{
-        max-width: 500px;
-        margin-bottom: 50px;
-        margin-top: 20px;
-        background-color: #F7F1E5;
+    .beneficios_registro{
+        font-size: 25px;
     }
 }
 
-@media screen and (max-width: 450px){
-    .contenedor_principal{
-        flex-direction: column;
-        align-items: center;
+@media (min-width: 768px){
+    h1{
+        font-size: 55px;
+        font-weight: 500px;
     }
-    .contenedor_registro{
-        max-width: 400px;
-        margin-left: 50px;
-        height: 150px;
-        width: 360px;
+    .beneficios_registro{
+        font-size: 30px;
     }
-    .contenedor_form{
-        max-width: 350px;
-        margin-bottom: 50px;
-        margin-top: 20px;
-        background-color: #F7F1E5;
+    .campos_form {
+        font-size: 25px;
     }
-    .boton_login_signup{
-        width: 300px;
-        height: 50px;
-        background-color: black;
-        color: white;
-        font-weight: 700;
-        border-radius: 10px;
+    input,textarea{
+        font-size: 25px;
     }
-
+    .btn{
+        font-size: 25px;
+    }
+    
 }
+
+@media(min-width: 992px)
