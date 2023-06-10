@@ -5,14 +5,111 @@
         background-size: cover;
         width: 100%;
         height: 100%;
-    }   
+}
 
-/* Estilos para el contenedor que tiene todos los elementos */
-.contenedor_principal {
+section {
+    margin-top: 20px;
+}
+
+.contenedor-registro {
+    background-color: rgba(247, 241, 229, .4);
+    border-radius: 15px;
+}
+
+h1{
+    font-size: 30px;
+    font-style: bold;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.beneficios-registro{
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.contenedor-form {
+    background-color: rgba(247, 241, 229, .4);
+    border-radius: 15px;
+    width: 100%;
+}
+
+form {
+    padding: 10px;
+}
+
+input,textarea {
+    background-color:#f7f1e5;
+}
+
+.btn{
+    background: #e7b10a;
+    border-color: #e7b10a;
+    color: black;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    section {
+        height: 75vh;
+    }
+
+    .contenedor-registro {
+        width: 85%;
+    }
+    h1{
+        font-size: 45px;
+    }
+
+    .beneficios-registro{
+        font-size: 25px;
+    }
+
+    .contenedor-form {
+        width: 85%;
+    }
+
+    .form-label {
+        font-size: 18px;
+    }
+
+    input,textarea {
+        font-size: 18px;
+    }
+
+    .btn{
+        font-size: 18px;
+    }
+}
+    
+
+@media (min-width: 992px) {
+    section {
+        position: absolute;
+        top: 20%;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    .beneficios-registro{
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .contenedor-form {
+        width: 90%;
+    }
+
+}
+
+/* .contenedor_principal {
     position: absolute;
     top: 15%;
 }
-/* Estilos para el recuadro donde está el texto de registro y el botón de iniciar sesión */
+
 .contenedor_registro {
     background-color: rgba(247, 241, 229, .4);
     border-radius: 15px;
@@ -97,4 +194,6 @@ input,textarea{
     
 }
 
-@media(min-width: 992px)
+@media(min-width: 992px) {
+
+} */
