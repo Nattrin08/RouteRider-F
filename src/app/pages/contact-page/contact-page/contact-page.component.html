@@ -1,39 +1,70 @@
-<section>
+<section class="w-100">
   <div class="background-img z-n1 position-fixed top-0"></div>
-    <main class="row row-cols-1 row-cols-sm-2 contenedor_principal w-100 m-auto">
-
-     <div class="col w-100 d-flex justify-content-center">
+  <div class="row row-cols-1 row-cols-lg-2 w-100 mx-0 mx-lg-0">
+    <div class="col mb-3 mb-sm-4">
+      <div class="text-center w-100 d-flex justify-content-center">
+        <div class="contenedor-registro">
+          <h1>Contáctanos</h1>
+          <p class="beneficios-registro">Llena el formulario y cuéntanos cómo podemos ayudarte</p>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+      <div class="contenedor-form">
+        <form class="">
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="contactName">
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="contactEmail">
+          </div>
+          <div class="mb-3">
+            <label for="contactSubject" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="contactSubject">
+          </div>
+          <div class="mb-3">
+            <label for="contactText" class="form-label">Sugerencias y/o preguntas</label>
+            <textarea type="text" class="form-control" id="contactText" rows="6"></textarea>
+          </div>
+          <button type="submit" class="btn">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row row-cols-1 row-cols-lg-2 w-100 mx-0">
+    <div class="col w-100">
       <div class="contenedor_registro mx-0">
         <h1>Contáctanos</h1>
         <p class="beneficios_registro">Llena el formulario y cuéntanos cómo podemos ayudarte</p>
       </div>
-     </div>
+    </div>
+    <div class="col w-100">
+      <form class="contenedor_form w-100" id="form">
+        <p class="campos_form">¿Cuál es tu nombre?</p>
+        <div>
+        <input type="text" class="form-control" id="name" placeholder="Nombre">
+        </div>
 
-     <div class="col w-100 d-flex justify-content-center">
-        <form class="contenedor_form" id="form">
-          <p class="campos_form">¿Cuál es tu nombre?</p>
-          <!-- <div> -->
-            <input type="text" class="form-control" id="name" placeholder="Nombre">
-          <!-- </div> -->
-          
-          <p class="campos_form">Escribe tu correo electrónico</p>
-          <!-- <div> -->
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-          <!-- </div> -->
-          
-          <p class="campos_form">Asunto de contacto</p>
-          <!-- <div> -->
-            <input type="text" class="form-control" id="user" placeholder="Asunto">
-          <!-- </div> -->
-          
-          <p class="campos_form">Preguntas o sugerencias</p>
-          <!-- <div> -->
-            <textarea type="text" class="form-control campo_mensaje" id="mensaje" placeholder="Tu mensaje aquí"></textarea>
-          <!-- </div> -->
-          
-          <!-- <button class="w-50 btn btn-lg btn-light boton_login_signup btn_ingresar" type="submit">Enviar</button> -->
-          <button class="btn w-100" type="submit">ENVIAR</button>
-        </form>
-      </div>
-    </main>
-  </section>
+        <p class="campos_form">Escribe tu correo electrónico</p>
+        <div>
+        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+        </div>
+
+        <p class="campos_form">Asunto de contacto</p>
+        <div>
+        <input type="text" class="form-control" id="user" placeholder="Asunto">
+        </div>
+
+        <p class="campos_form">Preguntas o sugerencias</p>
+        <div>
+        <textarea type="text" class="form-control campo_mensaje" id="mensaje" placeholder="Tu mensaje aquí"></textarea>
+        </div>
+
+        <button class="w-50 btn btn-lg btn-light boton_login_signup btn_ingresar" type="submit">Enviar</button>
+        <button class="btn w-100" type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </div> -->
+</section>
