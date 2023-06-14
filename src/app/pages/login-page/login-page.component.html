@@ -4,33 +4,27 @@
     <div class="row">
       <div class="col-md column-left">
         <article>
-          <img src="/assets/img/motorcycleTouring.jpg" alt=""/>
-          <img src="/assets/img/V-STROM.png" alt=""/>
+          <img src="/assets/img/motorcycleTouring.jpg" alt="" />
+          <img src="/assets/img/V-STROM.png" alt="" />
         </article>
       </div>
+
       <div class="col-md column-right login-input-container">
-        <div class="input-group login-input short-input">
-          <input
-            type="email"
-            class="form-control"
-            id="inputEmail"
-            aria-describedby="emailHelp"
-            placeholder="Correo electrónico"
-          />
-        </div>
-        <div class="input-group login-input short-input">
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword"
-            placeholder="Contraseña"
-          />
-        </div>
-        <div class="input-group short-input">
-          <button type="button" class="btn btn-primary login-button">
-            INGRESAR
-          </button>
-        </div>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+          <div class="input-group login-input short-input">
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+              placeholder="Correo electrónico" name="useremail" [(ngModel)]="useremail" required />
+          </div>
+          <div class="input-group login-input short-input">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" name="userpassword"
+              [(ngModel)]="userpassword" required />
+          </div>
+          <div class="input-group short-input">
+            <button type="button" class="btn btn-primary login-button" [disabled]="!loginForm.form.valid">
+              INGRESAR
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
