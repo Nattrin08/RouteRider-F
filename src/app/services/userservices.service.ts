@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 
@@ -8,21 +9,22 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 export class UserservicesService {
   private useremail!: string;
   private userData!:string;
-  private ApiUrl = "http://localhost:3000/users";
+  private ApiUrl = "http://localhost:3000/api/users";
 
-  constructor(private http: HttpClient) { }
-  login(email: string, password: string): void {
+  constructor(private http: HttpClient, private router:Router) { }
+  login(useremail: string, userpassword: string): void {
     const loginUrl = `${this.ApiUrl}/login`
     const formData = {
-      email: email,
-      password: password
+      email: useremail,
+      password: userpassword
     }
     this.http.post(loginUrl, formData).subscribe(
       (response: any) => {
         // this.authToken = response.accessToken;
         localStorage.setItem("token", response.token)
         console.log("response: ", response);
-        this.useremail = formData.email;
+        this.router.navigate([''])
+        // this.useremail = formData.email;
       },
       (error) => {
         if (error instanceof HttpErrorResponse) {
