@@ -1,120 +1,57 @@
 <section class="w-100 h-100">
   <div class="background-img z-n1 position-fixed top-0"></div>
   <div class="container login-container">
-    <div class="row">
-      <div class="col-md column-left">
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputName"
-          aria-describedby="nameHelp"
-          placeholder="Nombre"
-          name="firstName" [(ngModel)]="firstName" required
-        />
-        <input
-          type="email"
-          class="form-control short-input"
-          id="inputEmail"
-          aria-describedby="emailHelp"
-          placeholder="Correo electrónico" name="useremail" [(ngModel)]="useremail" required
-        />
-        <input
-          type="password"
-          class="form-control short-input"
-          id="inputPassword"
-          placeholder="Contraseña"
-        />
-        <input
-          type="number"
-          class="form-control short-input"
-          id="phoneNumber"
-          aria-describedby="phoneNumberHelp"
-          placeholder="Celular"
-        />
-        <div class="form-control-with-radio short-input">
-          <input
-            type="text"
-            class="form-control"
-            id="inputBike"
-            aria-describedby="bikeHelp"
-            placeholder="Motocicleta"
-            readonly
-          />
-          <div class="radio-buttons">
-            <label for="bikeYes" class="radio-label">
-              <input type="radio" id="bikeYes" name="bikeOption" value="yes" />
-              <span class="radio-text">Sí</span>
-            </label>
-            <label for="bikeNo" class="radio-label">
-              <input type="radio" id="bikeNo" name="bikeOption" value="no" />
-              <span class="radio-text">No</span>
-            </label>
+    <form (ngSubmit)="createUser()" >
+      <!-- createForm="ngForm" -->
+      <div class="row">
+        <div class="col-md column-left">
+          <input type="text" class="form-control short-input" id="inputName" aria-describedby="nameHelp"
+            placeholder="Nombre" name="firstName" [(ngModel)]="firstName" required />
+          <input type="email" class="form-control short-input" id="inputEmail" aria-describedby="emailHelp"
+            placeholder="Correo electrónico" name="useremail" [(ngModel)]="useremail" required />
+          <input type="password" class="form-control short-input" id="inputPassword" placeholder="Contraseña" />
+          <input type="number" class="form-control short-input" id="phoneNumber" aria-describedby="phoneNumberHelp"
+            placeholder="Celular" />
+          <div class="form-control-with-radio short-input">
+            <input type="text" class="form-control" id="inputBike" aria-describedby="bikeHelp" placeholder="Motocicleta"
+              readonly />
+            <div class="radio-buttons">
+              <label for="bikeYes" class="radio-label">
+                <input type="radio" id="bikeYes" name="bikeOption" value="yes" />
+                <span class="radio-text">Sí</span>
+              </label>
+              <label for="bikeNo" class="radio-label">
+                <input type="radio" id="bikeNo" name="bikeOption" value="no" />
+                <span class="radio-text">No</span>
+              </label>
+            </div>
+          </div>
+          <input type="text" class="form-control short-input" id="inputRef" aria-describedby="refHelp"
+            placeholder="Referencia" />
+          <input type="text" class="form-control short-input" id="inputType" aria-describedby="typeHelp"
+            placeholder="Tipo" />
+        </div>
+        <div class="col-md column-right">
+          <input type="text" class="form-control short-input" id="inputLastName" aria-describedby="lastNameHelp"
+            placeholder="Apellido" name="lastName" [(ngModel)]="lastName" required />
+          <input type="text" class="form-control short-input" id="inputBirthday" aria-describedby="birthdayHelp"
+            placeholder="Fecha de nacimiento" />
+          <input type="password" class="form-control short-input" id="inputConfirmPassword"
+            placeholder="Confirmar contraseña" />
+          <input type="text" class="form-control short-input" id="inputCity" aria-describedby="cityHelp"
+            placeholder="Ciudad" />
+          <input type="text" class="form-control short-input" id="inputBrand" aria-describedby="brandHelp"
+            placeholder="Marca" />
+          <input type="text" class="form-control short-input" id="inputModel" aria-describedby="modelHelp"
+            placeholder="Modelo" />
+          <div class="input-group short-btn">
+            <button type="submit" class="btn btn-primary login-button" >
+              <!-- [disabled]="!createForm.form.valid" -->
+              REGISTRARSE
+            </button>
           </div>
         </div>
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputRef"
-          aria-describedby="refHelp"
-          placeholder="Referencia"
-        />
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputType"
-          aria-describedby="typeHelp"
-          placeholder="Tipo"
-        />
       </div>
-      <div class="col-md column-right">
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputLastName"
-          aria-describedby="lastNameHelp"
-          placeholder="Apellido"
-          name="lastName" [(ngModel)]="lastName" required
-        />
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputBirthday"
-          aria-describedby="birthdayHelp"
-          placeholder="Fecha de nacimiento"
-        />
-        <input
-          type="password"
-          class="form-control short-input"
-          id="inputConfirmPassword"
-          placeholder="Confirmar contraseña"
-        />
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputCity"
-          aria-describedby="cityHelp"
-          placeholder="Ciudad"
-        />
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputBrand"
-          aria-describedby="brandHelp"
-          placeholder="Marca"
-        />
-        <input
-          type="text"
-          class="form-control short-input"
-          id="inputModel"
-          aria-describedby="modelHelp"
-          placeholder="Modelo"
-        />
-        <div class="input-group short-btn">
-          <button type="button" class="btn btn-primary login-button">
-            REGISTRARSE
-          </button>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </section>
