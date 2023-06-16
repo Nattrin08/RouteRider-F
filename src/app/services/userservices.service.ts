@@ -33,8 +33,28 @@ export class UserservicesService {
           }
           else {
             console.error(`codigo de error ${error.status}` + `mensaje: ${error.error}`)
+            alert ("Usuario/contraseña incorrectos");
           }
         }
+      }
+    )
+  }
+
+  create(firstName:string,lastName:string, useremail:string, userpassword:string):void{
+    const createUrl = `${this.ApiUrl}/create`
+    const formData = {
+      firstName : firstName,
+      lastName  : lastName,
+      email: useremail,
+      password: userpassword  
+    }
+    this.http.post(createUrl,formData)
+    .subscribe(
+      (response:any) => {
+        console.log("Registro exitoso. ", response);
+      },
+      (error) => {
+        console.log("Error: ", error);
       }
     )
   }

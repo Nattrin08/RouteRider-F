@@ -15,7 +15,9 @@ export class LoginPageComponent {
   constructor(private Userservice: UserservicesService, private router:Router) { }
   ngOnInit(){
     console.log("email: ", this.useremail)
-    console.log("password: ", this.userpassword);}
+    console.log("password: ", this.userpassword);
+  }
+   
 
   login() {
 
