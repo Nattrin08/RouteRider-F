@@ -9,13 +9,14 @@
           id="inputName"
           aria-describedby="nameHelp"
           placeholder="Nombre"
+          name="firstName" [(ngModel)]="firstName" required
         />
         <input
           type="email"
           class="form-control short-input"
           id="inputEmail"
           aria-describedby="emailHelp"
-          placeholder="Correo electrónico"
+          placeholder="Correo electrónico" name="useremail" [(ngModel)]="useremail" required
         />
         <input
           type="password"
@@ -72,6 +73,7 @@
           id="inputLastName"
           aria-describedby="lastNameHelp"
           placeholder="Apellido"
+          name="lastName" [(ngModel)]="lastName" required
         />
         <input
           type="text"
